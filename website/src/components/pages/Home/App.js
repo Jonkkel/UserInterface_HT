@@ -7,39 +7,50 @@
     Stepper,
     StepLabel,
     Container
-  } from '@mui/material';
-  import { useState, useCallback } from 'react';
-  
-  import Modal from './Modal';
-  import useToken from '../../useToken'
-  import Land from './../Land';
-  // Handles routing.
-  function App() {
-  
+} from '@mui/material';
+import { useState, useCallback } from 'react';
+
+import Modal from './Modal';
+import useToken from '../../useToken'
+import Land from './../Land';
+// Handles routing.
+function App() {
+
     const { token, removeToken, saveToken } = useToken();
     const [location, setLocation] = useState(0);
-  
+
     return (
-  
-      <Container>
-        {
-          !token && token !== "" && token !== undefined ?
-            <Land />
-            :
-            (
-              <>
-                <Modal/>
-  
-                < Typography variant='h3'>Hello world!</Typography>
-              </>
-            )
-  
-        }
-      </Container >
-  
+
+        <Container>
+            {
+                !token && token !== "" && token !== undefined ?
+                    <Land />
+                    :
+                    (
+                        <>
+                            <Modal />
+                            <Box sx={{
+                                textAlign: 'right'
+                            }}>
+
+                                <Button variant='contained'
+
+                                    onClick={() => removeToken()}>
+                                    Logout
+                                </Button>
+                            </Box>
+                            < Typography variant='h3'>Hello world!</Typography>
+
+
+                        </>
+                    )
+
+            }
+        </Container >
+
     );
-  }
-  
-  export default App;
-  
+}
+
+export default App;
+
   // rfce
