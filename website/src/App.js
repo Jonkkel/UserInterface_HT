@@ -1,7 +1,7 @@
 import './App.css';
 import useToken from './components/useToken';
 
-import Land from './components/pages/Land';
+
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import Home from './components/pages/Home';
@@ -34,31 +34,28 @@ const theme = createTheme({
 
 // Handles routing.
 function App() {
-  const { token, removeToken, saveToken } = useToken();
 
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <Box className="App">
-          {!token && token !== "" && token !== undefined ?
-            <Land/>
-            : (
-              <>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/register" element={<Register />} />
-                  <Route
-                    path="*"
-                    element={
-                      <Box style={{ padding: "1rem", color: 'black' }}>
-                        <p>There's nothing here!</p>
-                      </Box>
-                    }
-                  />
-                </Routes>
-              </>
-            )}
+
+          <>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route
+                path="*"
+                element={
+                  <Box style={{ padding: "1rem", color: 'black' }}>
+                    <p>There's nothing here!</p>
+                  </Box>
+                }
+              />
+            </Routes>
+          </>
+
 
         </Box>
       </ThemeProvider>
