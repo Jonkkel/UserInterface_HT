@@ -4,7 +4,7 @@ import useToken from './components/useToken';
 
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
-import Home from './components/pages/Home';
+import Home from './components/pages/Home/App';
 
 import { useState, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
