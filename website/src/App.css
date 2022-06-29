@@ -28,11 +28,19 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.bg-image {
+  position: absolute;
+  height: 93vh;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg');
+}
+
+.mapImage{
+  margin: auto;
+  height: 100%;
+  width: 100%;
 }
