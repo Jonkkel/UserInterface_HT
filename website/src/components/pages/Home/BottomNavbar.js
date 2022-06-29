@@ -22,6 +22,9 @@ import GroupIcon from '@mui/icons-material/Group';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
 
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocationOffIcon from '@mui/icons-material/LocationOff';
+import PersonIcon from '@mui/icons-material/Person';
 const StyledFab = styled(Fab)({
     position: 'absolute',
     zIndex: 1,
@@ -32,7 +35,11 @@ const StyledFab = styled(Fab)({
 });
 
 function App() {
-    const [location, setLocation] = useState(0);
+    const [location, setLocation] = useState(true);
+
+    function handleClick () {
+        setLocation(!location)
+    }
 
     return (
         <AppBar position="static"
@@ -66,11 +73,14 @@ function App() {
                         <Typography>Community</Typography>
                     </IconButton>
 
-                    <StyledFab color="secondary" aria-label="add"
+                    <StyledFab color={location ? 'error': 'success'} aria-label="add"
                         sx={{
                             flexDirection: 'column'
-                        }}>
-                        <LocationSearchingIcon />
+                        }}
+                        onClick={() => handleClick()}
+                        >
+                       
+                        {location ? <LocationOffIcon/> :  <LocationOnIcon />}
                     </StyledFab>
                     <IconButton color="secondary"
                         sx={{
@@ -84,9 +94,9 @@ function App() {
                         sx={{
                             flexDirection: 'column'
                         }}>
-                        <MoreIcon />
+                        <PersonIcon />
 
-                        <Typography>More</Typography>
+                        <Typography>Profile</Typography>
                     </IconButton>
 
                 </Toolbar>
