@@ -29,7 +29,11 @@ function App(props) {
         setLocation(checked);
     }
 
-    const [checked, setChecked] = React.useState(false);
+
+
+    const [checked, setChecked] = useState(false);
+
+    const [reason, setReason] = useState(1);
 
     const handleChange = (event) => {
         setChecked(event.target.checked);
@@ -80,6 +84,26 @@ function App(props) {
                             <MenuItem value={10}>Till turned off</MenuItem>
                         </Select>
                     </FormControl>
+
+                    <FormControl fullWidth 
+                    disabled={checked ? false : true}
+                    sx={{mt: 2}}
+                    >
+                        <InputLabel id="demo-simple-select-label">Why share location?</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            label="Why share location?"
+                            value={reason}
+                            onChange={(e) => setReason(e.target.value)}
+                        >
+                            <MenuItem value={1}>Want to tell my friends</MenuItem>
+                            <MenuItem value={2}>Good party right here</MenuItem>
+                            <MenuItem value={3}>I'm wasted, help!</MenuItem>
+                            <MenuItem value={4}>??</MenuItem>
+                        </Select>
+                    </FormControl>
+
                     <Button
                         variant='contained'
                         sx={{
