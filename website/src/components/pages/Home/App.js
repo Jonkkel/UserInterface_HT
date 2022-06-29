@@ -12,8 +12,8 @@
 } from '@mui/material';
 import { useState, useCallback } from 'react';
 
-import BottomNavbar from './BottomNavbar';
-import TopNavbar from './TopNavbar';
+import BottomNavbar from '../../BottomNavbar';
+import TopNavbar from '../../TopNavbar';
 
 import useToken from '../../useToken'
 import Land from './../Land';
@@ -27,12 +27,11 @@ function App() {
 
         <Box>
             <Container sx={{
-                height: '100vh',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between'
             }}>
-                <TopNavbar />
+                {/* <TopNavbar /> */}
                 {/* <Box className='bg-image' /> */}
                 <Paper elevation={10}
                     sx={{
@@ -47,7 +46,7 @@ function App() {
                     <img src="./map.png" className="mapImage" />
                 </Paper>
 
-                <BottomNavbar />
+                {/* <BottomNavbar /> */}
             </Container>
         </Box>
 

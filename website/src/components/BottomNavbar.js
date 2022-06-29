@@ -5,7 +5,6 @@ import {
     Typography,
     Button,
     Step,
-    Link,
     Container,
     Fab,
     IconButton,
@@ -17,13 +16,14 @@ import { useState, useCallback } from 'react';
 
 import HomeIcon from '@mui/icons-material/Home';
 import ForumIcon from '@mui/icons-material/Forum';
-import AddIcon from '@mui/icons-material/Add';
 import GroupIcon from '@mui/icons-material/Group';
-import Modal from './Modal';
+import PersonIcon from '@mui/icons-material/Person';
+
+import { Link } from 'react-router-dom';
+import Modal from './pages/Home/Modal';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocationOffIcon from '@mui/icons-material/LocationOff';
-import PersonIcon from '@mui/icons-material/Person';
 const StyledFab = styled(Fab)({
     position: 'absolute',
     height: 80,
@@ -35,15 +35,23 @@ const StyledFab = styled(Fab)({
     margin: '0 auto',
 });
 
+const list = {
+    name: ["Home", "Community", "Friends", "Profile"],
+    icon: [HomeIcon, ForumIcon, GroupIcon, PersonIcon]
+}
+
 function App() {
     const [location, setLocation] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    const [time, setTime] = useState(1)
+    const [time, setTime] = useState(1);
+    const [page, setPage] = useState("Home");
 
     function handleClick() {
         // setLocation(!location);
         setShowModal(!showModal);
     }
+
+
 
     return (
         <AppBar position="static"
@@ -62,14 +70,24 @@ function App() {
 
 
 
-                    <IconButton color="primary" aria-label="open drawer"
+                    <IconButton
+                        color={page === "Home" ? "primary" : "secondary"}
+                        aria-label="open drawer"
+                        component={Link}
+                        to="/"
+                        onClick={() => setPage("Home")}
                         sx={{
                             flexDirection: 'column'
                         }}>
                         <HomeIcon />
                         <Typography>Home</Typography>
                     </IconButton>
-                    <IconButton color="secondary" aria-label="open drawer"
+                    <IconButton
+                        color={page === "Community" ? "primary" : "secondary"}
+                        aria-label="open drawer"
+                        component={Link}
+                        to="/Community"
+                        onClick={() => setPage("Community")}
                         sx={{
                             flexDirection: 'column'
                         }}>
@@ -77,7 +95,10 @@ function App() {
                         <Typography>Community</Typography>
                     </IconButton>
 
-                    <StyledFab color={location ? 'success' : 'error'} aria-label="add"
+                    <StyledFab
+                        color={location ? 'success' : 'error'}
+
+                        aria-label="add"
                         sx={{
                             flexDirection: 'column'
                         }}
@@ -101,7 +122,11 @@ function App() {
                         time={time}
                         setTime={setTime}
                     />
-                    <IconButton color="secondary"
+                    <IconButton
+                        color={page === "Friends" ? "primary" : "secondary"}
+                        component={Link}
+                        to="/Friends"
+                        onClick={() => setPage("Friends")}
                         sx={{
                             flexDirection: 'column'
                         }}>
@@ -109,7 +134,11 @@ function App() {
 
                         <Typography>Friends</Typography>
                     </IconButton>
-                    <IconButton color="secondary"
+                    <IconButton
+                        color={page === "Profile" ? "primary" : "secondary"}
+                        component={Link}
+                        to="/Profile"
+                        onClick={() => setPage("Profile")}
                         sx={{
                             flexDirection: 'column'
                         }}>
