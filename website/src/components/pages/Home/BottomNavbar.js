@@ -19,14 +19,15 @@ import HomeIcon from '@mui/icons-material/Home';
 import ForumIcon from '@mui/icons-material/Forum';
 import AddIcon from '@mui/icons-material/Add';
 import GroupIcon from '@mui/icons-material/Group';
-import MoreIcon from '@mui/icons-material/MoreVert';
-import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
+import Modal from './Modal';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocationOffIcon from '@mui/icons-material/LocationOff';
 import PersonIcon from '@mui/icons-material/Person';
 const StyledFab = styled(Fab)({
     position: 'absolute',
+    height: 80,
+    width: 80,
     zIndex: 1,
     top: -30,
     left: 0,
@@ -35,10 +36,13 @@ const StyledFab = styled(Fab)({
 });
 
 function App() {
-    const [location, setLocation] = useState(true);
+    const [location, setLocation] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [time, setTime] = useState(1)
 
-    function handleClick () {
-        setLocation(!location)
+    function handleClick() {
+        // setLocation(!location);
+        setShowModal(!showModal);
     }
 
     return (
@@ -73,15 +77,30 @@ function App() {
                         <Typography>Community</Typography>
                     </IconButton>
 
-                    <StyledFab color={location ? 'error': 'success'} aria-label="add"
+                    <StyledFab color={location ? 'success' : 'error'} aria-label="add"
                         sx={{
                             flexDirection: 'column'
                         }}
                         onClick={() => handleClick()}
-                        >
-                       
-                        {location ? <LocationOffIcon/> :  <LocationOnIcon />}
+                    >
+
+                        {location ? <LocationOnIcon /> : <LocationOffIcon />}
+
+                        {location ?
+                            <Typography variant={'body1'}>on</Typography>
+                            :
+                            <Typography variant={'body1'}>off</Typography>
+                        }
                     </StyledFab>
+
+                    <Modal
+                        showModal={showModal}
+                        setShowModal={setShowModal}
+                        location={location}
+                        setLocation={setLocation}
+                        time={time}
+                        setTime={setTime}
+                    />
                     <IconButton color="secondary"
                         sx={{
                             flexDirection: 'column'

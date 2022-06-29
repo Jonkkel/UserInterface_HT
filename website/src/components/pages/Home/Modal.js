@@ -8,25 +8,38 @@ import {
     Typography,
     MenuItem,
     Select,
-    Button
+    Button,
+    Switch
 } from '@mui/material';
 
 
 
-function App() {
+function App(props) {
 
-    const [open, setOpen] = useState(true);
+    const { showModal,
+        setShowModal,
+        location,
+        setLocation,
+        time,
+        setTime
+    } = props;
 
     const handleShowModal = () => {
-        setOpen(true);
+        setShowModal(!showModal);
+        setLocation(checked);
     }
 
+    const [checked, setChecked] = React.useState(true);
+
+    const handleChange = (event) => {
+        setChecked(event.target.checked);
+    };
 
     return (
         <Box sx={{ display: 'flex', color: 'black', flexDirection: { xs: 'column', sm: 'column' } }}>
             <Modal
-                open={open}
-                onClose={() => setOpen(false)}
+                open={showModal}
+                onClose={() => setShowModal(false)}
                 onClick={(e) => e.stopPropagation()}
                 sx={{ overflow: 'scroll' }}
             >
@@ -40,20 +53,31 @@ function App() {
                     borderRadius: 5,
                     p: 3,
                 }}>
-                    <Typography variant='h6'>
-                        Use location
-                    </Typography>
-                    <FormControl fullWidth>
+                    <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+
+                        <Typography variant='h6' flexGrow={1}>
+                            Use location
+                        </Typography>
+                        <Switch
+                            label='aria-label'
+                            checked={checked}
+                            onChange={handleChange}
+                            color="success" />
+
+                    </Box>
+                    <FormControl fullWidth disabled={checked ? false : true}>
                         <InputLabel id="demo-simple-select-label">Length</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             label="Length"
+                            value={time}
+                            onChange={(e) => setTime(e.target.value)}
                         >
-                            <MenuItem value={10}>1 day</MenuItem>
-                            <MenuItem value={20}>2 days</MenuItem>
-                            <MenuItem value={30}>5 days</MenuItem>
-                            <MenuItem value={40}>Till turned off</MenuItem>
+                            <MenuItem value={1}>1 day</MenuItem>
+                            <MenuItem value={2}>2 days</MenuItem>
+                            <MenuItem value={5}>5 days</MenuItem>
+                            <MenuItem value={10}>Till turned off</MenuItem>
                         </Select>
                     </FormControl>
                     <Button
@@ -63,7 +87,7 @@ function App() {
                             display: 'flex',
                             mt: 2
                         }}
-                        onClick={() => setOpen(false)}>
+                        onClick={() => handleShowModal()}>
                         Selkee
                     </Button>
                 </Box>
