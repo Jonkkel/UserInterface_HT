@@ -13,6 +13,8 @@ import {
     Toolbar
 } from '@mui/material';
 
+import { useState, useCallback } from 'react';
+
 import HomeIcon from '@mui/icons-material/Home';
 import ForumIcon from '@mui/icons-material/Forum';
 import AddIcon from '@mui/icons-material/Add';
@@ -30,13 +32,14 @@ const StyledFab = styled(Fab)({
 });
 
 function App() {
-
+    const [location, setLocation] = useState(0);
 
     return (
         <AppBar position="static"
             sx={{
                 backgroundColor: 'transparent',
                 height: '7vh',
+                borderRadius: 3,
                 borderTop: '2px black solid'
             }}>
             <Container maxWidth="md">
@@ -48,7 +51,7 @@ function App() {
 
 
 
-                    <IconButton color="secondary" aria-label="open drawer"
+                    <IconButton color="primary" aria-label="open drawer"
                         sx={{
                             flexDirection: 'column'
                         }}>

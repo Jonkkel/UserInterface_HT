@@ -4,62 +4,40 @@ import {
     Typography,
     Button,
     Step,
-    Link,
-    Stepper,
-    StepLabel,
-    Container,
+    Icon,
     AppBar,
     Toolbar,
     IconButton
 } from '@mui/material';
 
-
+import SportsBarIcon from '@mui/icons-material/SportsBar';
 import SettingsIcon from '@mui/icons-material/Settings';
 
-const buttonNames = [
-    'home',
-    'friends',
-    'xd', 'xd', 'xd'
-]
 function App() {
-
-
     return (
         <AppBar position="static"
             sx={{
-                backgroundColor: 'transparent', top: 0,
+                backgroundColor: 'transparent',
+                borderRadius: 3,
+                top: 0,
                 height: '7vh',
             }}>
             <Toolbar disableGutters
-                sx={{ display: 'flex', justifyContent: 'center', my: 'auto' }}>
-
-                {/* {buttonNames.map((el) => {
-                    return (
-                        <Button variant='contained'
-                            sx={{
-                                mx: { xs: '2%', md: 5 },
-                            }}>
-                            <Typography
-                                variant="h3"
-                                sx={{
-                                    display: 'flex',
-                                    color: 'inherit',
-                                    textDecoration: 'none',
-                                    fontSize: { xs: 12, md: 15, lg: 18 }
-                                }}
-                            >
-                                {el}
-                            </Typography>
-                        </Button>
-                    )
-                })} */}
-                <Typography variant='h3'
                 sx={{
-                    color: 'black',
-                    fontWeight: 'bold'
+                    display: 'flex',
+                    justifyContent: 'center',
+                    my: 'auto'
                 }}>
+                <SportsBarIcon color='primary'
+                    sx={{ ml: 10 }} />
+                <Typography variant='h6'
+                    sx={{
+                        color: 'black',
+                        fontWeight: 'bold'
+                    }}>
                     Track your drunk friend
                 </Typography>
+                <Box flexGrow={1} />
 
                 <IconButton>
                     <SettingsIcon />
