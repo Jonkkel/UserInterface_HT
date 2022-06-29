@@ -39,9 +39,9 @@ function App() {
                 </Typography>
                 <Box flexGrow={1} />
 
-                <IconButton>
+                {/* <IconButton>
                     <SettingsIcon />
-                </IconButton>
+                </IconButton> */}
 
             </Toolbar>
         </AppBar>
