@@ -1,26 +1,22 @@
 ﻿import {
-    Box,
     Typography
 } from '@mui/material';
+
 // Handles routing.
 function App(props) {
-
     const { name } = props;
 
     return (
-
         <Typography
-            variant={'h3'}
+            variant={'overline'}
             sx={{
-                textAlign: 'center'
+                textAlign: 'center',
+                fontSize: 19,
             }}>
             Here would be the {name} page!
         </Typography>
-
-
     );
 }
 
 export default App;
-
-  // rfce
+// rfce

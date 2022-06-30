@@ -85,9 +85,9 @@ function App(props) {
                         </Select>
                     </FormControl>
 
-                    <FormControl fullWidth 
-                    disabled={checked ? false : true}
-                    sx={{mt: 2}}
+                    <FormControl fullWidth
+                        disabled={checked ? false : true}
+                        sx={{ mt: 2 }}
                     >
                         <InputLabel id="demo-simple-select-label">Why share location?</InputLabel>
                         <Select
@@ -100,7 +100,6 @@ function App(props) {
                             <MenuItem value={1}>Want to tell my friends</MenuItem>
                             <MenuItem value={2}>Good party right here</MenuItem>
                             <MenuItem value={3}>I'm wasted, help!</MenuItem>
-                            <MenuItem value={4}>??</MenuItem>
                         </Select>
                     </FormControl>
 

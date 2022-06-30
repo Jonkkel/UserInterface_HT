@@ -1,14 +1,7 @@
 ﻿import {
     Box,
-    Typography,
-    Button,
-    Step,
-    Link,
-    Stepper,
-    StepLabel,
     Container,
     Paper,
-    Toolbar
 } from '@mui/material';
 import { useState, useCallback } from 'react';
 
@@ -17,6 +10,7 @@ import TopNavbar from '../../TopNavbar';
 
 import useToken from '../../useToken'
 import Land from './../Land';
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 // Handles routing.
 function App() {
 
@@ -25,30 +19,32 @@ function App() {
 
     return (
 
-        <Box>
-            <Container sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-            }}>
-                {/* <TopNavbar /> */}
-                {/* <Box className='bg-image' /> */}
-                <Paper elevation={10}
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        mt: 5,
-                        p: 2.5,
-                        borderRadius: 5,
-                        mx: 'auto',
-                        width: '60%'
-                    }}>
-                    <img src="./map.png" className="mapImage" />
+        <Container sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+        }}>
+            {/* <TopNavbar /> */}
+            {/* <Box className='bg-image' /> */}
+            <Box
+                sx={{
+                    justifyContent: 'center',
+                    display: 'flex',
+                    borderRadius: 5,
+                    height: '85vh',
+                    width: '100%',
+                    px: 0,
+                    m: 0,
+                }}>
+                <Paper
+                    elevation={10}
+                    sx={{ borderRadius: 5 }}>
+                    <img src="./map2.png" className="mapImage" />
                 </Paper>
+            </Box>
 
-                {/* <BottomNavbar /> */}
-            </Container>
-        </Box>
+            {/* <BottomNavbar /> */}
+        </Container>
 
 
     );

@@ -20,8 +20,14 @@ import { Container, Box } from '@mui/material'
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#4a8bd4',
+      main: '#02ad6f',
     },
+    secondary: {
+      main: '#868787',
+    },
+    beer: {
+      main: '#ffbf00',
+    }
   },
   typography: {
     button: {
@@ -42,12 +48,14 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <Container sx={{
-          height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between'
-        }}>
+        <Box
+          className='background'
+          sx={{
+            height: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+          }}>
           <TopNavbar />
           <Routes>
 
@@ -68,7 +76,7 @@ function App() {
           </Routes>
           <BottomNavbar />
 
-        </Container>
+        </Box>
       </ThemeProvider>
     </Router>
   );

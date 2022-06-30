@@ -43,4 +43,13 @@
   margin: auto;
   height: 100%;
   width: 100%;
+  border-radius: 10px;
+}
+
+.background{
+  
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-image: url('https://lut.pictures.fi/kuvat/LUT%20Press%20Images/Nature%20%26%20City/Autumn/lut-nature-17.jpg?img=img4k'); */
+  /* background-size: '93vh'; */
 }

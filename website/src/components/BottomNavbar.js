@@ -26,10 +26,10 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocationOffIcon from '@mui/icons-material/LocationOff';
 const StyledFab = styled(Fab)({
     position: 'absolute',
-    height: 80,
-    width: 80,
+    height: 100,
+    width: 100,
+    top: -50,
     zIndex: 1,
-    top: -30,
     left: 0,
     right: 0,
     margin: '0 auto',
@@ -59,7 +59,8 @@ function App() {
                 backgroundColor: 'transparent',
                 height: '7vh',
                 borderRadius: 3,
-                borderTop: '2px black solid'
+                borderTop: '2px black solid',
+                // top: '93vh'
             }}>
             <Container maxWidth="md">
                 <Toolbar disableGutters
