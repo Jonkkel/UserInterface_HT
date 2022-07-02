@@ -16,7 +16,7 @@ import UserCard from './UserCard';
 
 
 const Marker = (props) => {
-  const { color, badge, name, type } = props;
+  const { text, badge, name, type, distance } = props;
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -41,6 +41,7 @@ const Marker = (props) => {
           <Badge
             sx={{
               color: '#000',
+              zIndex: 1
             }}
             // overlap="circular"
             anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
@@ -56,7 +57,7 @@ const Marker = (props) => {
         </ClickAwayListener>
       </IconButton>
       <Popper id={id} open={open} anchorEl={anchorEl}>
-        <UserCard name={name} />
+        <UserCard name={name} text={text} badge={badge} distance={distance}/>
       </Popper>
 
 

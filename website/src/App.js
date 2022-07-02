@@ -20,10 +20,10 @@ import { Container, Box } from '@mui/material'
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#02ad6f',
+      main: '#0078a3',
     },
     secondary: {
-      main: '#868787',
+      main: '#101010',
     },
     beer: {
       main: '#ffbf00',

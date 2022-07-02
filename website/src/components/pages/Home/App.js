@@ -32,7 +32,7 @@ function App() {
                     justifyContent: 'center',
                     display: 'flex',
                     borderRadius: 5,
-                    height: '86vh',
+                    height: '93vh',
                     width: '100%',
                     // my: 2,
                 }}>

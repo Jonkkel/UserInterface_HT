@@ -4,13 +4,13 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 
 export default function BasicCard(props) {
-    const {name} = props;
+    const { name, text, badge, distance } = props;
     return (
-        <Card sx={{ minWidth: 275, borderRadius: 4}}>
+        <Card sx={{ minWidth: 275, borderRadius: 4, zIndex: 2000 }}>
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                     Profile
@@ -19,13 +19,21 @@ export default function BasicCard(props) {
                     {name}
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    7km away
+                    {distance}
                 </Typography>
-                <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
+
+                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                    Reason
                 </Typography>
+                <Divider />
+                <Box
+                    sx={{ display: 'flex' }}>
+                    {badge}
+                    <Typography variant="body2" component="div" sx={{ my: 0.3, ml: 0.2 }}>
+                        {text}
+                    </Typography>
+                </Box>
+
             </CardContent>
             {/* <CardActions>
                 <Button size="small">Learn More</Button>

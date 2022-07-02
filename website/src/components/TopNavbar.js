@@ -19,7 +19,6 @@ function App() {
                 backgroundColor: 'transparent',
                 borderRadius: 3,
                 zIndex: 3,
-                
             }}>
 
             <Container maxWidth="md">

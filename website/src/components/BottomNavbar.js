@@ -26,15 +26,15 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocationOffIcon from '@mui/icons-material/LocationOff';
 
 const StyledFab = styled(Fab)({
-    position: 'absolute',
-    height: 100,
+    // position: 'fixed',
+    flexDirection: 'column',
+    height: 70,
     width: 200,
-    borderRadius: 50,
-    top: -50,
-    zIndex: 1,
+    borderRadius: 10,
+    bottom: 35,
     left: 0,
     right: 0,
-    margin: 'auto',
+
 });
 
 const list = {
@@ -56,14 +56,19 @@ function App() {
 
 
     return (
-        <AppBar position="static"
+        <AppBar position="fixed"
             sx={{
-                backgroundColor: 'transparent',
+                backgroundColor: 'white',
                 borderRadius: 3,
                 borderTop: '2px black solid',
+                height: '7vh',
+                top: '93vh',
+                width: '34vw',
+                right: '33vw',
+                left: '33vw'
                 // top: '93vh'
             }}>
-            <Container maxWidth="md">
+            <Container maxWidth="sm">
                 <Toolbar disableGutters
                     sx={{
                         display: 'flex',
@@ -101,21 +106,15 @@ function App() {
                         color={location ? 'success' : 'error'}
 
                         aria-label="add"
-                        sx={{
-                            position: 'absolute',
-                            flexDirection: 'column',
-                            m: 'auto',
-                            width: 0.2
-                        }}
                         onClick={() => handleClick()}
                     >
 
                         {location ? <LocationOnIcon /> : <LocationOffIcon />}
 
                         {location ?
-                            <Typography variant={'body1'}>on</Typography>
+                            <Typography variant={'body1'}>Sharing location {time}</Typography>
                             :
-                            <Typography variant={'body1'}>off</Typography>
+                            <Typography variant={'body1'}>Share location</Typography>
                         }
                     </StyledFab>
 
