@@ -24,15 +24,17 @@ import Modal from './pages/Home/Modal';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocationOffIcon from '@mui/icons-material/LocationOff';
+
 const StyledFab = styled(Fab)({
     position: 'absolute',
     height: 100,
-    width: 100,
+    width: 200,
+    borderRadius: 50,
     top: -50,
     zIndex: 1,
     left: 0,
     right: 0,
-    margin: '0 auto',
+    margin: 'auto',
 });
 
 const list = {
@@ -57,7 +59,6 @@ function App() {
         <AppBar position="static"
             sx={{
                 backgroundColor: 'transparent',
-                height: '7vh',
                 borderRadius: 3,
                 borderTop: '2px black solid',
                 // top: '93vh'
@@ -66,7 +67,7 @@ function App() {
                 <Toolbar disableGutters
                     sx={{
                         display: 'flex',
-                        justifyContent: 'space-evenly'
+                        justifyContent: 'space-between'
                     }}>
 
 
@@ -101,7 +102,10 @@ function App() {
 
                         aria-label="add"
                         sx={{
-                            flexDirection: 'column'
+                            position: 'absolute',
+                            flexDirection: 'column',
+                            m: 'auto',
+                            width: 0.2
                         }}
                         onClick={() => handleClick()}
                     >

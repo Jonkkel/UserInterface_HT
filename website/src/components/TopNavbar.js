@@ -18,8 +18,6 @@ function App() {
             sx={{
                 backgroundColor: 'transparent',
                 borderRadius: 3,
-                top: 0,
-                height: '7vh',
                 zIndex: 3,
                 
             }}>
@@ -29,10 +27,9 @@ function App() {
                     sx={{
                         display: 'flex',
                         justifyContent: 'center',
-                        my: 'auto'
                     }}>
                     <SportsBarIcon color='beer'/>
-                    <Typography variant='h6'
+                    <Typography variant='body1'
                         sx={{
                             color: 'black',
                             fontWeight: 'bold'

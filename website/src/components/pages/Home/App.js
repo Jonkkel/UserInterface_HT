@@ -9,7 +9,8 @@ import BottomNavbar from '../../BottomNavbar';
 import TopNavbar from '../../TopNavbar';
 
 import useToken from '../../useToken'
-import Land from './../Land';
+
+import Map from '../../map/Map';
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
 // Handles routing.
 function App() {
@@ -19,7 +20,7 @@ function App() {
 
     return (
 
-        <Container sx={{
+        <Box sx={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
@@ -31,25 +32,21 @@ function App() {
                     justifyContent: 'center',
                     display: 'flex',
                     borderRadius: 5,
-                    height: '85vh',
+                    height: '86vh',
                     width: '100%',
-                    px: 0,
-                    m: 0,
+                    // my: 2,
                 }}>
-                <Paper
-                    elevation={10}
-                    sx={{ borderRadius: 5 }}>
-                    <img src="./map2.png" className="mapImage" />
-                </Paper>
-            </Box>
+                {/* <img src='./Avatar1.png' height={200} /> */}
+                {/* <img src="./map2.png" className="mapImage" /> */}
 
+                <Map />
+            </Box>
             {/* <BottomNavbar /> */}
-        </Container>
+        </Box>
 
 
     );
 }
 
 export default App;
-
   // rfce
