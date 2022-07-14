@@ -1,10 +1,11 @@
 ﻿import React, { useEffect, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
+
 import Marker from './Marker';
 import MarkerGroup from './MarkerGroup';
+import Legend from './Legend';
 
-import LiquorIcon from '@mui/icons-material/Liquor';
-
+import SportsBarRoundedIcon from '@mui/icons-material/SportsBarRounded';
 import NewReleasesIcon from '@mui/icons-material/NewReleases';
 
 const items = {
@@ -14,24 +15,21 @@ const items = {
     text: ["Jari", "JeeGroup", "Kari", "ryhmä25"]
 }
 
-const defaultMapOptions = {
-    fullscreenControl: false,
-    clickableIcons: false,
-  };
+const mapOptions = { fullscreenControl: false, disableDefaultUI: true }
+
 
 const Map = (props) => {
     const [center, setCenter] = useState({ lat: 61.06070905720617, lng: 28.188641124711868 });
     const [zoom, setZoom] = useState(14);
 
-
     return (
         <div style={{ height: '100%', width: '100%' }}>
             <GoogleMapReact
+                // resetBoundsOnResize={true}
                 bootstrapURLKeys={{ key: 'AIzaSyAmpFNR28voaDnjiA3jdG6NdRmYW-U4Qoc' }}
                 defaultCenter={center}
                 defaultZoom={zoom}
-                defaultOptions={defaultMapOptions}
-
+                options={mapOptions}
             >
                 <Marker
                     lat={61.06}
@@ -40,11 +38,9 @@ const Map = (props) => {
                     name="Jari Kalmari"
                     text="Good party right here"
                     distance="1.5km away"
-                    badge={<LiquorIcon />}
+                    borderColor="#ffa978"
+                    badge={<SportsBarRoundedIcon />}
                 />
-
-
-
                 <Marker
                     lat={61.056}
                     lng={28.175}
@@ -52,6 +48,7 @@ const Map = (props) => {
                     name="Aatos Turunen"
                     text="Help I am wasted!"
                     distance="1km away"
+                    borderColor="#00ff94"
                     badge={<NewReleasesIcon />}
                 />
 
@@ -62,6 +59,7 @@ const Map = (props) => {
                     name="Anselmi Menovesi"
                     text="Want to tell my friends"
                     distance="1.5km away"
+                    borderColor="#5200ff"
                     badge=""
                 />
 
@@ -91,7 +89,7 @@ const Map = (props) => {
                     name="Ryhmä 1 JeeJee"
                     text="Good party right here"
                     distance="2km away"
-                    badge={<LiquorIcon />}
+                    badge={<SportsBarRoundedIcon />}
                 />
                 <MarkerGroup
                     lat={61.05}
@@ -112,6 +110,7 @@ const Map = (props) => {
                     badge=""
                 />
             </GoogleMapReact>
+            <Legend />
         </div>
     );
 }

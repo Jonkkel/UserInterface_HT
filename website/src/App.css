@@ -39,17 +39,31 @@
   background-image: url('https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg');
 }
 
-.mapImage{
+.mapImage {
   margin: auto;
   height: 100%;
   width: 100%;
   border-radius: 10px;
 }
 
-.background{
-  
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-  /* background-image: url('https://lut.pictures.fi/kuvat/LUT%20Press%20Images/Nature%20%26%20City/Autumn/lut-nature-17.jpg?img=img4k'); */
-  /* background-size: '93vh'; */
+.icon {
+
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  /* font-size: large; */
+}
+
+@keyframes example {
+
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(0px) scale(0.9);
+    opacity: 1;
+  }
 }

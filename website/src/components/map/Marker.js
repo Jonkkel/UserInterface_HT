@@ -16,7 +16,7 @@ import UserCard from './UserCard';
 
 
 const Marker = (props) => {
-  const { text, badge, name, type, distance } = props;
+  const { text, badge, name, type, distance, borderColor} = props;
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -51,6 +51,7 @@ const Marker = (props) => {
             <Avatar
               alt="Travis Howard"
               src={type}
+              sx={{border: '3px solid' + (borderColor)}}
             />
           </Badge>
 

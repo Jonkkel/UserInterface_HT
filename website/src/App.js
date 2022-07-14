@@ -1,14 +1,10 @@
 import './App.css';
-import useToken from './components/useToken';
 
-
-import Login from './components/pages/Login';
-import Register from './components/pages/Register';
 import Home from './components/pages/Home/App';
 import PlaceHolder from './components/pages/PlaceHolder';
 
-import BottomNavbar from './components/BottomNavbar';
-import TopNavbar from './components/TopNavbar';
+import BottomNavbar from './components/pages/Home/BottomNavbar';
+// import TopNavbar from './components/TopNavbar';
 
 import { useState, useCallback } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -20,14 +16,37 @@ import { Container, Box } from '@mui/material'
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#0078a3',
+      main: '#2F8F9D', //Blue
+      light: '#00ff94', //Teal
+      dark: '#5200ff', //Blue/purple
+      // main: '#ffa978', //orange
+      contrastText: '#000',
+
+
     },
     secondary: {
       main: '#101010',
     },
     beer: {
-      main: '#ffbf00',
-    }
+      main: '#ff9f29',
+      light: '#ffc176',
+      dark: '##dc7900',
+      contrastText: '#FFF',
+    },
+    white: {
+      main: '#FFF',
+      light: '#2cff78',
+      dark: '#F0EBE3',
+      contrastText: '#000',
+    },
+    black: {
+      main: '#000',
+      light: '#2C3639',
+      dark: '#576F72',
+      contrastText: '#FFF',
+    },
+    contrastThreshold: 3,
+    tonalOffset: 0.2,
   },
   typography: {
     button: {
@@ -56,15 +75,13 @@ function App() {
             flexDirection: 'column',
             justifyContent: 'space-between',
           }}>
-          <TopNavbar />
+          {/* <TopNavbar /> */}
           <Routes>
 
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
             <Route path="/Community" element={<PlaceHolder name={"Community"} />} />
             <Route path="/Friends" element={<PlaceHolder name={"Friends"} />} />
             <Route path="/Profile" element={<PlaceHolder name={"Profile"} />} />
-            <Route path="/register" element={<Register />} />
             <Route
               path="*"
               element={

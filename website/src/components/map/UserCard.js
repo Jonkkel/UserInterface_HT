@@ -2,7 +2,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
@@ -10,7 +9,7 @@ import Typography from '@mui/material/Typography';
 export default function BasicCard(props) {
     const { name, text, badge, distance } = props;
     return (
-        <Card sx={{ minWidth: 275, borderRadius: 4, zIndex: 2000 }}>
+        <Card sx={{ minWidth: 275, borderRadius: 4 }}>
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                     Profile
@@ -21,7 +20,6 @@ export default function BasicCard(props) {
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                     {distance}
                 </Typography>
-
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                     Reason
                 </Typography>
@@ -35,9 +33,6 @@ export default function BasicCard(props) {
                 </Box>
 
             </CardContent>
-            {/* <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions> */}
         </Card>
     );
 }
