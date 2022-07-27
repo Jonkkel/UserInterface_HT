@@ -62,15 +62,17 @@ function App() {
 
 
     return (
-        <Div100vh 
+        <Box 
             
             style={{
                 backgroundColor: '#FFF',
                 position: 'fixed',
                 width: '100%',
                 borderTop: '2px black solid',
-                minHeight: '65px',
-                top: 'calc(100vh - 67px)',
+                height: '65px',
+                // top: 'calc(100vh - 67px)',
+                // top: 0,
+                bottom: 0,
                 zIndex: 3002
             }}>
             <Container maxWidth="sm">
@@ -99,7 +101,7 @@ function App() {
                     })}
                 </Toolbar>
             </Container>
-        </Div100vh>
+        </Box>
     )
 }
 
