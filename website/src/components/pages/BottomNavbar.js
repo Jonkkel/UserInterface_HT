@@ -70,7 +70,6 @@ function App() {
                 width: '100%',
                 borderTop: '2px black solid',
                 minHeight: '65px',
-                bottom: 65,
                 top: 'calc(100vh - 67px)',
                 zIndex: 3002
             }}>
