@@ -12,6 +12,7 @@ import {
     Toolbar
 } from '@mui/material';
 
+import Div100vh from 'react-div-100vh'
 import { useState, useCallback } from 'react';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
@@ -61,9 +62,12 @@ function App() {
 
 
     return (
-        <AppBar position="fixed"
-            color="white"
-            sx={{
+        <Div100vh 
+            
+            style={{
+                backgroundColor: '#FFF',
+                position: 'fixed',
+                width: '100%',
                 borderTop: '2px black solid',
                 minHeight: '65px',
                 bottom: 0,
@@ -95,63 +99,8 @@ function App() {
                         )
                     })}
                 </Toolbar>
-
-
-
-                {/* <IconButton
-                        color={page === "Home" ? "primary" : "secondary"}
-                        aria-label="open drawer"
-                        component={Link}
-                        to="/"
-                        onClick={() => setPage("Home")}
-                        sx={{
-                            flexDirection: 'column',
-                            my: 'auto'
-                        }}>
-                        {page === "Home" ? <HomeIcon fontSize="medium" /> : <HomeOutlinedIcon fontSize="medium" />}
-                        <Typography>Home</Typography>
-                    </IconButton>
-                    <IconButton
-                        color={page === "Community" ? "primary" : "secondary"}
-                        aria-label="open drawer"
-                        component={Link}
-                        to="/Community"
-                        onClick={() => setPage("Community")}
-                        sx={{
-                            flexDirection: 'column'
-                        }}>
-                        <ForumOutlinedIcon fontSize="medium" />
-                        <Typography>Community</Typography>
-                    </IconButton>
-
-
-                    <IconButton
-                        color={page === "Friends" ? "primary" : "secondary"}
-                        component={Link}
-                        to="/Friends"
-                        onClick={() => setPage("Friends")}
-                        sx={{
-                            flexDirection: 'column'
-                        }}>
-                        <GroupOutlinedIcon fontSize="medium" />
-
-                        <Typography>Friends</Typography>
-                    </IconButton>
-                    <IconButton
-                        color={page === "Profile" ? "primary" : "secondary"}
-                        component={Link}
-                        to="/Profile"
-                        onClick={() => setPage("Profile")}
-                        sx={{
-                            flexDirection: 'column'
-                        }}>
-                        <PersonOutlinedIcon fontSize="medium" />
-
-                        <Typography>Profile</Typography>
-                    </IconButton> */}
-
             </Container>
-        </AppBar>
+        </Div100vh>
     )
 }
 
