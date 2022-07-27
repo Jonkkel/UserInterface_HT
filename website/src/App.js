@@ -70,7 +70,7 @@ function App() {
         <Box
           className='background'
           sx={{
-            height: '100vh',
+            height: '-webkit-fill-available',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',

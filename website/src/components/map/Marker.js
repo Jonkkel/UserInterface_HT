@@ -62,7 +62,7 @@ const Marker = (props) => {
         open={open}
         anchorEl={anchorEl}
         keepMounted={false}
-        sx={{ zIndex: 3001}}
+        sx={{ zIndex: 3001 }}
         disablePortal={true}
       >
         <UserCard name={name} text={text} badge={badge} distance={distance} />

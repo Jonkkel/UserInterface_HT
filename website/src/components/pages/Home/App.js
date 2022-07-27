@@ -2,6 +2,8 @@
     Box,
     Paper
 } from '@mui/material';
+
+import Div100vh from 'react-div-100vh'
 import Map from '../../map/Map';
 import { useState, useCallback } from 'react';
 import LocationShareButton from './Location/LocationShareButton';
@@ -21,7 +23,7 @@ function App() {
             flexDirection: 'column',
             justifyContent: 'space-between',
         }}>
-            <Box
+            <Div100vh
                 sx={{
                     justifyContent: 'center',
                     display: 'flex',
@@ -57,7 +59,7 @@ function App() {
                     Perkele
 
                 </Box> */}
-            </Box>
+            </Div100vh>
         </Box>
     );
 }

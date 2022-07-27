@@ -35,7 +35,8 @@ const Map = (props) => {
     return (
         <div style={{ height: '100%', width: '100%' }}>
             <GoogleMapReact
-                // resetBoundsOnResize={true}
+                // tracksViewChanges={false}
+                litemode={true}
                 bootstrapURLKeys={{ key: 'AIzaSyAmpFNR28voaDnjiA3jdG6NdRmYW-U4Qoc' }}
                 defaultCenter={center}
                 defaultZoom={zoom}
@@ -44,6 +45,9 @@ const Map = (props) => {
                 {items.map((el, index) => {
                     return (
                         <Marker
+                            optimized={false}
+                            tracksViewChanges={false}
+                            litemode={true}
                             key={index}
                             lat={el.lat}
                             lng={el.lng}
