@@ -48,9 +48,10 @@ function App(props) {
                 borderTopRightRadius: 10,
                 borderTopLeftRadius: 10,
             }}>
-            {items.map((el) => {
+            {items.map((el, index) => {
                 return (
                     <Box
+                        key={index}
                         sx={{
                             px: 0.1,
                             py: 0.5,

@@ -61,11 +61,13 @@ function App() {
 
 
     return (
-        <AppBar position="static"
+        <AppBar position="fixed"
             color="white"
             sx={{
                 borderTop: '2px black solid',
                 minHeight: '65px',
+                bottom: 0,
+                top: 'calc(100vh - 67px)',
                 zIndex: 3002
             }}>
             <Container maxWidth="sm">

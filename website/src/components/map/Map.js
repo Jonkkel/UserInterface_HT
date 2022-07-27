@@ -17,12 +17,12 @@ import NewReleasesIcon from '@mui/icons-material/NewReleases';
 // }
 
 const items = [
-    { lat: 61.06, lng: 28.188, type: "./Avatar1.png", name: "Jari Kalmari", badge: <SportsBarRoundedIcon />, distance: "1.5km away", borderColor: "#ffa978"},
-    { lat: 61.056, lng: 28.175, type: "./Avatar2.png", name: "Aatos Turunen", badge: <NewReleasesIcon />, distance: "1.5km away", borderColor: "#00ff94"},
-    { lat: 61.06, lng: 28.178, type: "./Avatar3.png", name: "Anselmi Menovesi", badge: "", distance: "1km away", borderColor: "#5200ff"},
-    { lat: 61.0, lng: 28.178, type: "./Avatar3.png", name: "Vilhelmiina Turunen", badge: "", distance: "23km away", borderColor: "#ffa978"},
-    { lat: 61.05, lng: 28.22, type: "./Avatar3.png", name: "Sara Kurki", badge: <NewReleasesIcon />, distance: "3km away", borderColor: "#ffa978"},
-    { lat: 61.052, lng: 28.185, type: "./Avatar4.png", name: "Me", badge: "", distance: "Here", borderColor: "#ffa978"},
+    { lat: 61.06, lng: 28.188, type: "./Avatar1.png", name: "Jari Kalmari", badge: <SportsBarRoundedIcon />, distance: "1.5km away", borderColor: "#ffa978" },
+    { lat: 61.056, lng: 28.175, type: "./Avatar2.png", name: "Aatos Turunen", badge: <NewReleasesIcon />, distance: "1.5km away", borderColor: "#00ff94" },
+    { lat: 61.06, lng: 28.178, type: "./Avatar3.png", name: "Anselmi Menovesi", badge: "", distance: "1km away", borderColor: "#5200ff" },
+    { lat: 61.0, lng: 28.178, type: "./Avatar3.png", name: "Vilhelmiina Turunen", badge: "", distance: "23km away", borderColor: "#ffa978" },
+    { lat: 61.05, lng: 28.22, type: "./Avatar3.png", name: "Sara Kurki", badge: <NewReleasesIcon />, distance: "3km away", borderColor: "#ffa978" },
+    { lat: 61.052, lng: 28.185, type: "./Avatar4.png", name: "Me", badge: "", distance: "Here", borderColor: "#ffa978" },
 ]
 
 const mapOptions = { fullscreenControl: false, disableDefaultUI: true, draggable: true }
@@ -44,6 +44,7 @@ const Map = (props) => {
                 {items.map((el, index) => {
                     return (
                         <Marker
+                            key={index}
                             lat={el.lat}
                             lng={el.lng}
                             type={el.type}
