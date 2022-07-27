@@ -16,7 +16,7 @@ import UserCard from './UserCard';
 
 
 const Marker = (props) => {
-  const { text, badge, name, type, distance, borderColor} = props;
+  const { text, badge, name, type, distance, borderColor } = props;
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -51,14 +51,21 @@ const Marker = (props) => {
             <Avatar
               alt="Travis Howard"
               src={type}
-              sx={{border: '3px solid' + (borderColor)}}
+              sx={{ border: '3px solid' + (borderColor) }}
             />
           </Badge>
 
         </ClickAwayListener>
       </IconButton>
-      <Popper id={id} open={open} anchorEl={anchorEl}>
-        <UserCard name={name} text={text} badge={badge} distance={distance}/>
+      <Popper
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        keepMounted={false}
+        sx={{ zIndex: 3001}}
+        disablePortal={true}
+      >
+        <UserCard name={name} text={text} badge={badge} distance={distance} />
       </Popper>
 
 

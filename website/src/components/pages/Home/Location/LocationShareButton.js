@@ -35,9 +35,11 @@ function App(props) {
                 height: { xs: '60px', sm: '100px' },
                 width: { xs: '60px', sm: '100px' },
                 borderRadius: '50%',
-                bottom: { xs: 45, sm: 40 },
+                bottom: { xs: 80, sm: 70 },
                 left: { xs: 'calc(50% - 30px)', sm: 'calc(50% - 50px)' },
                 right: { xs: 'calc(50% - 30px)', sm: 'calc(50% - 50px)' },
+                opacity: 0.9,
+                border: '1px solid black'
 
             }}
             color={location ? 'success' : 'error'}
@@ -51,10 +53,13 @@ function App(props) {
                     fontSize: { xs: '13px', sm: '15px' }
                 }}
                 >
-                    {timelist[time]}
+                    GPS on
+                    {/* {timelist[time]} */}
                 </Typography>
                 :
-                <Typography variant={'body1'}>Off</Typography>
+                <Typography  sx={{
+                    fontSize: { xs: '13px', sm: '15px' }
+                }} variant={'body1'}>GPS off</Typography>
             }
             <LocationModal
                 showModal={showModal}

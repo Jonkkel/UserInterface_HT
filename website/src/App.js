@@ -3,7 +3,7 @@ import './App.css';
 import Home from './components/pages/Home/App';
 import PlaceHolder from './components/pages/PlaceHolder';
 
-import BottomNavbar from './components/pages/Home/BottomNavbar';
+import BottomNavbar from './components/pages/BottomNavbar';
 // import TopNavbar from './components/TopNavbar';
 
 import { useState, useCallback } from 'react';

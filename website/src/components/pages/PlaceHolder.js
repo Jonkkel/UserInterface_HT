@@ -8,9 +8,10 @@ function App(props) {
 
     return (
         <Typography
-            variant={'overline'}
+            variant={'h5'}
             sx={{
                 textAlign: 'center',
+                my: 'auto',
                 fontSize: 19,
             }}>
             Here would be the {name} page!

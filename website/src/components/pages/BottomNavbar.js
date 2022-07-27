@@ -25,7 +25,8 @@ import PersonIcon from '@mui/icons-material/Person';
 
 import { Link } from 'react-router-dom';
 
-import LocationShareButton from './LocationShareButton';
+import LocationShareButton from './Home/Location/LocationShareButton';
+import FriendsButton from './Home/Friends/FriendsButton';
 
 const StyledFab = styled(Fab)({
     position: 'absolute',
@@ -55,7 +56,7 @@ const list = [
 
 function App() {
 
-    const [page, setPage] = useState("Home");
+    const [page, setPage] = useState(window.location.pathname.replace('/', '') === '' ? 'Home' : window.location.pathname.replace('/', ''));
 
 
 
@@ -64,7 +65,8 @@ function App() {
             color="white"
             sx={{
                 borderTop: '2px black solid',
-                minHeight: '70px',
+                minHeight: '65px',
+                zIndex: 3002
             }}>
             <Container maxWidth="sm">
                 <Toolbar disableGutters
@@ -90,7 +92,6 @@ function App() {
                             </IconButton>
                         )
                     })}
-                    <LocationShareButton />
                 </Toolbar>
 
 

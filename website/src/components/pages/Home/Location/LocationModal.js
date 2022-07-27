@@ -19,6 +19,7 @@ const StyledButton = styled(Button)({
     display: 'flex',
     margin: '0 auto',
     marginTop: '10px',
+    borderRadius: '10px'
 });
 
 function App(props) {
@@ -50,7 +51,7 @@ function App(props) {
 
     // const [checked, setChecked] = useState(false);
     const [reason, setReason] = useState(1);
-    const [placeholder, setPlaceholder] = useState(1);
+    const [placeholder, setPlaceholder] = useState(0);
 
     return (
         <Box sx={{ display: 'flex', color: 'black', flexDirection: { xs: 'column', sm: 'column' } }}>
