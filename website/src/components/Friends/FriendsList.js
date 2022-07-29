@@ -62,8 +62,8 @@ function App(props) {
                             display: 'flex',
                             justifyContent: 'space-evenly',
                             alignItems: 'center',
-                            width: 'auto',
-                            minWidth: 190
+                            minWidth: 200,
+                            
 
                         }}>
                             <Avatar
@@ -87,8 +87,11 @@ function App(props) {
                                         {el.online}
                                     </Typography>
                                 </Box>
-                                <Typography textAlign={'start'} sx={{ fontSize: 8, mt: 1.1 }}>
+                                <Typography textAlign={'start'} sx={{ fontSize: 8 }}>
                                     {el.relation}
+                                </Typography>
+                                <Typography textAlign={'start'} sx={{ fontSize: 8}}>
+                                    {el.distance}
                                 </Typography>
                             </Box>
                         </Box>
