@@ -69,12 +69,22 @@ function App(props) {
                                 src={el.type}
                                 sx={{ border: '3px solid' + (el.borderColor) }}
                             />
-                            <Box sx={{
-                                display: 'flex',
-                            }}>
-                                <Typography display="inline" sx={{ fontSize: 14 }}>
-                                    {el.name}
-                                </Typography>
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column'
+                                }}>
+
+                                <Box sx={{
+                                    display: 'flex',
+                                }}>
+                                    <Typography display="inline" sx={{ fontSize: 14 }}>
+                                        {el.name}
+                                    </Typography>
+                                    <Typography display="inline" sx={{ fontSize: 8, pl: 0.4, mt: 1.1 }}>
+                                        now
+                                    </Typography>
+                                </Box>
                                 <Typography display="inline" sx={{ fontSize: 8, pl: 0.4, mt: 1.1 }}>
                                     now
                                 </Typography>
@@ -95,7 +105,7 @@ function App(props) {
                                 size="small"
                                 endAdornment={
                                     <IconButton position="start">
-                                        <SendIcon color='primary' />
+                                        <SendIcon color='blue' />
                                     </IconButton>
                                 }
                             />

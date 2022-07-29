@@ -82,7 +82,7 @@ function App(props) {
                         flexDirection: 'row',
                         alignItems: 'center',
                     }}>
-                        <Box sx={{ backgroundColor: '#00ff94 ', minWidth: 30, minHeight: 30, m: 1 }} />
+                        <Box sx={{ backgroundColor: '#d000f2 ', minWidth: 30, minHeight: 30, m: 1 }} />
 
                         <Box>
 

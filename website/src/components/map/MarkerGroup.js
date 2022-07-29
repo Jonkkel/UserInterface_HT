@@ -13,13 +13,6 @@ import {
 } from '@mui/material';
 import UserCard from './UserCard';
 
-const SmallAvatar = styled(Avatar)(({ theme }) => ({
-    width: 22,
-    height: 22,
-    border: `2px solid ${theme.palette.background.paper}`,
-}));
-
-
 const Marker = (props) => {
     const { color, badge, name, type } = props;
 

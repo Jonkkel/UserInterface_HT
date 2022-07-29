@@ -78,6 +78,19 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
     background:none !important;
 }
 
-.map{
-  filter: grayscale(0.2) !important;
+.marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border: 10px solid #fff;
+  border-radius: 100%;
+  user-select: none;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  /* &:hover {
+    
+  } */
 }

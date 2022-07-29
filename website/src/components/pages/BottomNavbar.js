@@ -29,19 +29,6 @@ import { Link } from 'react-router-dom';
 import LocationShareButton from './Home/Location/LocationShareButton';
 import FriendsButton from './Home/Friends/FriendsButton';
 
-const StyledFab = styled(Fab)({
-    position: 'absolute',
-    flexDirection: 'column',
-    height: 100,
-    width: 100,
-    borderRadius: '50%',
-    top: { xs: -150, sm: -50 },
-    zIndex: 1,
-    left: 0,
-    right: 0,
-    margin: 'auto',
-    margin: 'auto',
-});
 
 const list = [
     { name: "Home", icon: HomeOutlinedIcon, selectedIcon: HomeIcon, link: "/" },
@@ -62,16 +49,15 @@ function App() {
 
 
     return (
-        <Box 
-            
+        <Box
+
             style={{
                 backgroundColor: '#FFF',
                 position: 'fixed',
                 width: '100%',
                 borderTop: '2px black solid',
-                height: '65px',
-                // top: 'calc(100vh - 67px)',
-                // top: 0,
+                height: '68px',
+
                 bottom: 0,
                 zIndex: 3002
             }}>

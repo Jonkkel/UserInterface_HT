@@ -19,7 +19,7 @@ function App(props) {
     const handleClick = () => {
         setToggle(true);
 
-        console.log(toggle);
+        // console.log(toggle);
     }
     const handleClickAway = () => {
         setToggle(false);

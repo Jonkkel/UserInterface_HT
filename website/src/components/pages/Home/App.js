@@ -18,19 +18,7 @@ function App() {
 
 
     return (
-        <Box sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-        }}>
-            <Div100vh
-                sx={{
-                    justifyContent: 'center',
-                    display: 'flex',
-                    borderRadius: 5,
-                    height: 'calc(100vh - 67px)',
-                    width: '100%',
-                }}>
+        <Div100vh >
                 <Map />
 
                 {page === ("Home") ?
@@ -46,21 +34,7 @@ function App() {
                     <></>
                 }
                 <FriendsList toggle={toggle} setToggle={setToggle} />
-                {/* <Box
-                    sx={{
-                        backgroundColor: '#FFF',
-                        position: 'absolute',
-                        bottom: 65,
-                        zIndex: 3000,
-                        display: (toggle ? 'flex' : 'none'),
-                        width: '100%',
-                        height: 100
-                    }}>
-                    Perkele
-
-                </Box> */}
-            </Div100vh>
-        </Box>
+        </Div100vh>
     );
 }
 
