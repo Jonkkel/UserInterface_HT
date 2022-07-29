@@ -4,7 +4,7 @@
     Typography,
     Fab,
 } from '@mui/material';
-
+import { yellow, danger } from '@mui/material/colors';
 
 import { useState, useCallback } from 'react';
 import LocationModal from './LocationModal';
@@ -39,11 +39,15 @@ function App(props) {
                     bottom: 80,
                     left: { xs: 'calc(50% - 30px)', sm: 'calc(50% - 50px)' },
                     right: { xs: 'calc(50% - 30px)', sm: 'calc(50% - 50px)' },
-                    opacity: 0.9,
-                    border: '1px solid black'
+                    opacity: 0.95,
+                    border: '1px solid #909090',
+                    bgcolor: (location ? "#facc15" : "#f87171"),
+                    "&:hover": {
+                        bgcolor: (location ? "#fef08a" : "#fecaca"),
+                    }
+
 
                 }}
-                color={location ? 'success' : 'error'}
 
                 aria-label="add"
                 onClick={() => handleClick()}
@@ -59,7 +63,7 @@ function App(props) {
                     </Typography>
                     :
                     <Typography sx={{
-                        fontSize: { xs: '13px', sm: '15px' }
+                        fontSize: { xs: '12px', sm: '15px' },
                     }} variant={'body1'}>GPS off</Typography>
                 }
                 <LocationModal
@@ -71,7 +75,7 @@ function App(props) {
                     setTime={setTime}
                 />
             </Fab>
-        </Box>
+        </Box >
 
     )
 }

@@ -15,11 +15,12 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useState, useCallback } from 'react';
 
 const items = [
-    { lat: 61.06, lng: 28.188, type: "./Avatar1.png", name: "Jari Kalmari", badge: <SportsBarRoundedIcon />, distance: "1.5km away", borderColor: "#ffa978" },
-    { lat: 61.056, lng: 28.175, type: "./Avatar2.png", name: "Aatos Turunen", badge: <NewReleasesIcon />, distance: "1.5km away", borderColor: "#00ff94" },
-    { lat: 61.06, lng: 28.178, type: "./Avatar3.png", name: "Anselmi Menovesi", badge: "", distance: "1km away", borderColor: "#5200ff" },
-    // { lat: 61.0, lng: 28.178, type: "./Avatar3.png", name: "Vilhelmiina Turunen", badge: "", distance: "23km away", borderColor: "#ffa978"},
-    // { lat: 61.05, lng: 28.22, type: "./Avatar3.png", name: "Sara Kurki", badge: <NewReleasesIcon />, distance: "3km away", borderColor: "#ffa978"},
+    { type: "./Avatar1.png", name: "Jari Kalmari", relation: 'Group: Hahaa', distance: "1.5km away", online: "now", borderColor: "#ffa978" },
+    { type: "./Avatar2.png", name: "Aatos Turunen", relation: 'Best friend', distance: "1.5km away", online: "now", borderColor: "#D000F2" },
+    { type: "./Avatar3.png", name: "Anselmi Menovesi", relation: 'Friend', distance: "1km away", online: "7 min ago", borderColor: "#5200ff" },
+    { type: "./Avatar3.png", name: "Vilma Turunen", relation: 'Group: Hahaa', distance: "23km away", online: "15 min ago", borderColor: "#ffa978" },
+    { type: "./Avatar3.png", name: "Sara Kurki", relation: 'Group: Hahaa', distance: "3km away", online: "1 hour ago", borderColor: "#ffa978" },
+
     // { lat: 61.052, lng: 28.185, type: "./Avatar4.png", name: "Me", badge: "", distance: "Here", borderColor: "#ffa978"},
 ]
 
@@ -38,13 +39,13 @@ function App(props) {
             sx={{
                 backgroundColor: '#FFF',
                 position: 'fixed',
-                bottom: 65,
+                bottom: 62,
                 zIndex: 3000,
                 overflow: 'auto',
                 display: (toggle ? 'inline-flex' : 'none'),
                 left: 0,
                 right: 0,
-                borderTop: '1px solid black',
+                borderTop: '1px solid #909090',
                 borderTopRightRadius: 10,
                 borderTopLeftRadius: 10,
             }}>
@@ -61,7 +62,8 @@ function App(props) {
                             display: 'flex',
                             justifyContent: 'space-evenly',
                             alignItems: 'center',
-                            width: 180,
+                            width: 'auto',
+                            minWidth: 190
 
                         }}>
                             <Avatar
@@ -82,11 +84,11 @@ function App(props) {
                                         {el.name}
                                     </Typography>
                                     <Typography display="inline" sx={{ fontSize: 8, pl: 0.4, mt: 1.1 }}>
-                                        now
+                                        {el.online}
                                     </Typography>
                                 </Box>
-                                <Typography display="inline" sx={{ fontSize: 8, pl: 0.4, mt: 1.1 }}>
-                                    now
+                                <Typography textAlign={'start'} sx={{ fontSize: 8, mt: 1.1 }}>
+                                    {el.relation}
                                 </Typography>
                             </Box>
                         </Box>

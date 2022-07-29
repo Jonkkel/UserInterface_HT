@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 export default function BasicCard(props) {
     const { name, text, badge, distance } = props;
     return (
-        <Card sx={{ minWidth: 275, borderRadius: 4 }}>
+        <Card sx={{ minWidth: 275, borderRadius: 2, border: '1px solid #909090'}}>
             <CardContent sx={{ textAlign: 'start' }}>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                     Profile

@@ -9,7 +9,7 @@ import {
 
 import { useState, useCallback } from 'react';
 
-import GroupIcon from '@mui/icons-material/Group';
+import GroupSharpIcon from '@mui/icons-material/GroupSharp';
 
 
 function App(props) {
@@ -31,28 +31,30 @@ function App(props) {
                 sx={{
                     position: 'fixed',
                     flexDirection: 'column',
-                    height: { xs: '60px', sm: '100px' },
-                    width: { xs: '60px', sm: '100px' },
+                    height: { xs: '60px', sm: '80px' },
+                    width: { xs: '60px', sm: '80px' },
                     borderRadius: '50%',
                     bottom: 80,
                     left: { xs: 'calc(10% - 30px)', sm: 'calc(10% - 50px)' },
                     right: { xs: 'calc(50% - 30px)', sm: 'calc(50% - 50px)' },
-                    opacity: 0.9,
-                    border: '1px solid black'
-
+                    opacity: 0.95,
+                    border: '1px solid #909090',
+                    bgcolor: "#fafaf9",
+                    "&:hover": {
+                        bgcolor: "#e5e5e5",
+                    }
                 }}
-                color="white"
                 aria-label="add"
                 onClick={(e) => handleClick(e)}
             >
-                <GroupIcon />
+                <GroupSharpIcon />
                 <Typography
                     sx={{
-                        fontSize: { xs: '13px', sm: '15px' },
-                        fontWeight: 'bold'
+                        fontSize: { xs: '12px', sm: '15px' },
+                        // fontWeight: 'bold'
                     }}
                 >
-                    Friends
+                    Online
                 </Typography>
             </Fab>
         </ClickAwayListener>

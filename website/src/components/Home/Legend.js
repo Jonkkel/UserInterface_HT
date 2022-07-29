@@ -18,11 +18,13 @@ const Legend = (props) => {
     }
 
     return (
-        <Paper
+        <Paper elevation={3}
             sx={{
                 position: 'absolute',
                 right: 20,
                 top: 20,
+                border: '1px solid #909090',
+                opacity: 0.95,
                 overflow: 'hidden',
 
             }}>

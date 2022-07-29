@@ -1,6 +1,6 @@
-import Home from './components/pages/Home/App';
-import PlaceHolder from './components/pages/PlaceHolder';
-import BottomNavbar from './components/pages/BottomNavbar';
+import Home from './components/Home/index';
+import PlaceHolder from './components/PlaceHolder';
+// import BottomNavbar from './components/BottomNavbar';
 // import TopNavbar from './components/TopNavbar';
 
 import { Routes, Route } from 'react-router-dom'
@@ -27,7 +27,6 @@ function App() {
                 />
 
             </Routes>
-            <BottomNavbar />
         </Box>
     );
 }

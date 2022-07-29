@@ -1,12 +1,13 @@
 
 import { createTheme } from '@mui/material/styles';
 // Determining the used colors and pallette
+import { amber } from '@mui/material/colors';
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#2F8F9D', //Blue
+            main: "#BDC000", //Blue
             light: '#00ff94', //Teal
-            dark: '#5200ff', //Blue/purple
+            dark: '#979A00', //Blue/purple
             // main: '#ffa978', //orange
             contrastText: '#000',
         },
