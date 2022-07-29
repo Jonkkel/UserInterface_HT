@@ -3,7 +3,7 @@
     Paper
 } from '@mui/material';
 
-import Div100vh from 'react-div-100vh'
+import { use100vh } from 'react-div-100vh'
 import Map from '../map/Map';
 import { useState, useCallback } from 'react';
 import LocationShareButton from '../Location/LocationShareButton';
@@ -19,7 +19,7 @@ function App() {
     const [toggle, setToggle] = useState(false);
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', height: use100vh }}>
             <Map />
             <LocationShareButton />
             <FriendsButton toggle={toggle} setToggle={setToggle} />
