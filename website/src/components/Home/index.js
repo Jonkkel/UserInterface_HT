@@ -19,7 +19,7 @@ function App() {
     const [toggle, setToggle] = useState(false);
 
     return (
-        <Div100vh sx={{ display: 'flex', height: '100vh', flexDirection: 'column' }}>
+        <Div100vh sx={{ display: 'flex', flexDirection: 'column' }}>
             <Map />
             <LocationShareButton />
             <FriendsButton toggle={toggle} setToggle={setToggle} />

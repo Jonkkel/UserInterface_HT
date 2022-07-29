@@ -54,7 +54,7 @@ function App() {
                 width: '100%',
                 borderTop: '1px #909090 solid',
                 height: '67px',
-                bottom: 0
+                // bottom: 0
                 // zIndex: 3002
             }}>
             <Container maxWidth="sm">
