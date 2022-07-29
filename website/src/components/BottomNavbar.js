@@ -46,7 +46,7 @@ function App() {
     const [page, setPage] = useState(window.location.pathname.replace('/', '') === '' ? 'Home' : window.location.pathname.replace('/', ''));
 
     return (
-        <Box
+        <Div100vh
             style={{
                 backgroundColor: '#FFF',
                 // position: 'fixed',
@@ -84,7 +84,7 @@ function App() {
                     })}
                 </Toolbar>
             </Container>
-        </Box>
+        </Div100vh>
     )
 }
 
