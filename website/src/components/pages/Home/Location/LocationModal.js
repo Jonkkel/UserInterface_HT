@@ -81,7 +81,7 @@ function App(props) {
                         Turn on location sharing so your friends can find you.
                     </Typography>
                     <LocationTime placeholder={placeholder} setPlaceholder={setPlaceholder} />
-                    <LocationReason reason={reason} setReason={setReason} />
+                    {/* <LocationReason reason={reason} setReason={setReason} /> */}
                     <StyledButton
                         variant='contained'
                         color='black'

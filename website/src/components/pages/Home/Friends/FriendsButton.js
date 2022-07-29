@@ -34,7 +34,7 @@ function App(props) {
                     height: { xs: '60px', sm: '100px' },
                     width: { xs: '60px', sm: '100px' },
                     borderRadius: '50%',
-                    bottom: { xs: 80, sm: 70 },
+                    bottom: 80,
                     left: { xs: 'calc(10% - 30px)', sm: 'calc(10% - 50px)' },
                     right: { xs: 'calc(50% - 30px)', sm: 'calc(50% - 50px)' },
                     opacity: 0.9,

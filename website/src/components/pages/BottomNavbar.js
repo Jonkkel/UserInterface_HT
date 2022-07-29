@@ -50,7 +50,6 @@ function App() {
 
     return (
         <Box
-
             style={{
                 backgroundColor: '#FFF',
                 position: 'fixed',
