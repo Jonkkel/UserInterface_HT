@@ -9,6 +9,7 @@ import { useState, useCallback } from 'react';
 import LocationShareButton from './Location/LocationShareButton';
 import FriendsButton from './Friends/FriendsButton';
 import FriendsList from './Friends/FriendsList';
+import Legend from '../../map/Legend';
 
 function App() {
     const [page, setPage] = useState(window.location.pathname.replace('/', '') === '' ? 'Home' : window.location.pathname.replace('/', ''));
@@ -29,6 +30,7 @@ function App() {
                         }}>
                         <LocationShareButton />
                         <FriendsButton toggle={toggle} setToggle={setToggle} />
+                        <Legend />
                     </Box>
                     :
                     <></>

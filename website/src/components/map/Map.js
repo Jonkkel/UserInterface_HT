@@ -27,7 +27,6 @@ const Map = (props) => {
     const [zoom, setZoom] = useState(15);
 
     return (
-        <Box sx={{ height: '94%' }}>
             <GoogleMapReact
                 // tracksViewChanges={false}
                 litemode={true}
@@ -75,8 +74,7 @@ const Map = (props) => {
                 /> */}
 
             </GoogleMapReact>
-            <Legend />
-        </Box>
+            
     );
 }
 

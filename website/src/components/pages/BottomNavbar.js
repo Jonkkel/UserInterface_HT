@@ -55,7 +55,7 @@ function App() {
                 position: 'fixed',
                 width: '100%',
                 borderTop: '2px black solid',
-                height: '68px',
+                height: 'auto',
 
                 bottom: 0,
                 zIndex: 3002
