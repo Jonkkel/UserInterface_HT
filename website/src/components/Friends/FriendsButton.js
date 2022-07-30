@@ -35,7 +35,7 @@ function App(props) {
                     width: { xs: '60px', sm: '80px' },
                     borderRadius: '50%',
                     bottom: 80,
-                    left: { xs: 'calc(5% - 30px)', sm: 'calc(5% - 50px)' },
+                    left: { xs: 'calc(10% - 30px)', sm: 'calc(10% - 50px)' },
                     right: { xs: 'calc(50% - 30px)', sm: 'calc(50% - 50px)' },
                     opacity: 0.95,
                     border: '5px solid #909090',
