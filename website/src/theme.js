@@ -48,7 +48,7 @@ const theme = createTheme({
             textTransform: 'none'
         },
         fontFamily: [
-            "Poppins",
+            "open-sans",
             'sans-serif'
         ].join(','),
     },
