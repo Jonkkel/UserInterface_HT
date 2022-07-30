@@ -100,8 +100,11 @@ function App(props) {
                             sx={{
                                 display: 'flex',
                                 mx: 'auto',
-                                pb: 1,
+                                mb: 1,
+                                p: 0.2,
                                 width: 150,
+                                bgcolor: '#F0F0F0',
+                                borderRadius: 2
                             }}>
                             <Input
                                 id="input-with-icon-adornment"
@@ -134,7 +137,7 @@ function App(props) {
                                 <Typography display="inline" sx={{ fontSize: 10 }} color={'#000'}>
                                     Ask/View
                                 </Typography>
-                                <LocationOnIcon />
+                                <LocationOnIcon sx={{color: '#303030'}}/>
                             </IconButton>
                             <IconButton
                                 sx={{
@@ -151,7 +154,7 @@ function App(props) {
                                 <Typography display="inline" sx={{ fontSize: 10 }} color={'#000'}>
                                     Send
                                 </Typography>
-                                <LocationOnIcon />
+                                <LocationOnIcon sx={{color: '#303030'}}/>
                             </IconButton>
 
                         </Box>

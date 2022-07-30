@@ -192,7 +192,7 @@ function App(props) {
                     <Divider sx={{ mb: 1 }} />
                     <Button onClick={() => setShowModal(false)}
                         sx={{
-                            bgcolor: "#facc15",
+                            bgcolor: "#f2da01",
                             color: '#000',
                             border: '0.2px solid #000',
                             height: 60,

@@ -1,17 +1,17 @@
 import Home from './components/Home/index';
 import PlaceHolder from './components/PlaceHolder';
-// import BottomNavbar from './components/BottomNavbar';
-// import TopNavbar from './components/TopNavbar';
+import BottomNavbar from './components/BottomNavbar';
 
 import { Routes, Route } from 'react-router-dom'
 
+import { use100vh } from 'react-div-100vh'
 import { Box } from '@mui/material'
 
 
 // Handles routing.
 function App() {
     return (
-        <Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', height: use100vh }}>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Community" element={<PlaceHolder name={"Community"} />} />
@@ -27,6 +27,8 @@ function App() {
                 />
 
             </Routes>
+
+            <BottomNavbar />
         </Box>
     );
 }

@@ -11,21 +11,18 @@ import FriendsButton from '../Friends/FriendsButton';
 import FriendsList from '../Friends/FriendsList';
 import Legend from './Legend';
 
-import BottomNavbar from '../BottomNavbar';
 
 function App() {
-    const [page, setPage] = useState(window.location.pathname.replace('/', '') === '' ? 'Home' : window.location.pathname.replace('/', ''));
 
     const [toggle, setToggle] = useState(false);
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', height: use100vh }}>
+        <Box sx={{ height: use100vh }}>
             <Map />
             <LocationShareButton />
             <FriendsButton toggle={toggle} setToggle={setToggle} />
             <FriendsList toggle={toggle} setToggle={setToggle} />
             <Legend />
-            <BottomNavbar />
         </Box>
     );
 }

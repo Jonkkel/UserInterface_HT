@@ -67,7 +67,7 @@ function App() {
                         return (
                             <IconButton
                                 key={el.name}
-                                color={page === (el.name) ? "black" : "black"}
+                                // color={page === (el.name) ? "black" : "black"}
                                 aria-label="open drawer"
                                 component={Link}
                                 
@@ -77,7 +77,7 @@ function App() {
                                     flexDirection: 'column',
                                     my: 'auto',
                                 }}>
-                                {page === (el.name) ? <el.selectedIcon fontSize="medium" /> : <el.icon fontSize="medium" />}
+                                {page === (el.name) ? <el.selectedIcon fontSize="medium" sx={{color: '#d0d401'}}/> : <el.icon fontSize="medium" />}
                                 <Typography fontSize={14}>{el.name}</Typography>
                             </IconButton>
                         )

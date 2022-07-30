@@ -15,7 +15,7 @@ function App(props) {
 
     const {placeholder, setPlaceholder} = props;
     return (
-        <FormControl fullWidth sx={{ mt: 2 }}>
+        <FormControl fullWidth sx={{ mt: 2,  }}>
             <InputLabel id="demo-simple-select-label">Time</InputLabel>
             <Select
                 labelId="demo-simple-select-label"

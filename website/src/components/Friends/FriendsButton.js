@@ -35,10 +35,10 @@ function App(props) {
                     width: { xs: '60px', sm: '80px' },
                     borderRadius: '50%',
                     bottom: 80,
-                    left: { xs: 'calc(10% - 30px)', sm: 'calc(10% - 50px)' },
+                    left: { xs: 'calc(5% - 30px)', sm: 'calc(5% - 50px)' },
                     right: { xs: 'calc(50% - 30px)', sm: 'calc(50% - 50px)' },
                     opacity: 0.95,
-                    border: '1px solid #909090',
+                    border: '5px solid #909090',
                     bgcolor: "#fafaf9",
                     "&:hover": {
                         bgcolor: "#e5e5e5",
@@ -47,14 +47,15 @@ function App(props) {
                 aria-label="add"
                 onClick={(e) => handleClick(e)}
             >
-                <GroupSharpIcon />
+                <GroupSharpIcon sx={{color: '#'}}/>
                 <Typography
                     sx={{
                         fontSize: { xs: '12px', sm: '15px' },
-                        // fontWeight: 'bold'
+                        fontWeight: 'bold',
+                        color: '#002747'
                     }}
                 >
-                    Online
+                    Friends
                 </Typography>
             </Fab>
         </ClickAwayListener>

@@ -3,13 +3,13 @@
     Box
 } from '@mui/material';
 
-import BottomNavbar from './BottomNavbar';
-// Handles routing.
+import { use100vh } from 'react-div-100vh'
+
 function App(props) {
     const { name } = props;
 
     return (
-        <Box sx={{ display: 'flex', height: '100vh', flexDirection: 'column' }}>
+        <Box sx={{ display: 'flex', height: use100vh, flexDirection: 'column' }}>
             <Typography
                 variant={'h5'}
                 sx={{
@@ -19,7 +19,6 @@ function App(props) {
                 }}>
                 Here would be the {name} page!
             </Typography>
-            <BottomNavbar />
         </Box>
     );
 }

@@ -73,9 +73,12 @@ function App(props) {
                     <Typography variant='body2' sx={{ textAlign: 'center' }}>
                         Turn on location sharing so your friends can find you.
                     </Typography>
-                    <LocationTime placeholder={placeholder} setPlaceholder={setPlaceholder} />
-                    {/* <LocationReason reason={reason} setReason={setReason} /> */}
+                    <Box sx={{width:'90%', mx: 'auto'}}>
 
+                        <LocationTime placeholder={placeholder} setPlaceholder={setPlaceholder} />
+                        {/* <LocationReason reason={reason} setReason={setReason} /> */}
+
+                    </Box> 
 
 
                     <Box display={'flex'} flexDirection={'row'} justifyContent={'space-evenly'}
@@ -90,12 +93,12 @@ function App(props) {
                             // variant='contained'
                             sx={{
                                 border: '0.2px solid #909090',
-                                bgcolor: "#facc15",
+                                bgcolor: "#f2da01",
                                 color: '#000',
                                 height: 60,
                                 width: '40%',
                                 "&:hover": {
-                                    bgcolor: "#F2DA00",
+                                    bgcolor: "#fef08a",
                                 }
                             }}
                             onClick={() => locationOn()}>
@@ -124,7 +127,7 @@ function App(props) {
                             <Button
                                 sx={{
                                     border: '0.2px solid #909090',
-                                    bgcolor: "#fb7185",
+                                    bgcolor: "#fe4154",
                                     color: '#000',
                                     height: 60,
                                     mt: 1,
