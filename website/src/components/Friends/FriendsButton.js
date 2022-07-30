@@ -52,7 +52,7 @@ function App(props) {
                     sx={{
                         fontSize: { xs: '12px', sm: '15px' },
                         fontWeight: 'bold',
-                        color: '#002747'
+                        color: '#909090'
                     }}
                 >
                     Friends
