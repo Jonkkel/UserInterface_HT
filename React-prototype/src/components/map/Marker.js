@@ -9,14 +9,14 @@ import {
   Popper,
   Badge,
   ClickAwayListener,
-  Tooltip
+  Typography
 } from '@mui/material';
 import UserCard from './UserCard';
 
 
 
 const Marker = (props) => {
-  const { text, badge, name, type, distance, borderColor } = props;
+  const { text, badge, name, type, distance, borderColor,online } = props;
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -32,10 +32,16 @@ const Marker = (props) => {
     <Box sx={{
       display: 'flex',
       flexDirection: 'column',
+      textAlign: 'center',
+      // flex: 1,
+      // width: 55,
+
+      // bgcolor: '#000'
     }}>
       <IconButton
         aria-describedby={id}
         onClick={handleClick}
+        sx={{p: 0}}
       >
         <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
           <Badge
@@ -57,6 +63,14 @@ const Marker = (props) => {
 
         </ClickAwayListener>
       </IconButton>
+      {/* <Box sx={{bgcolor: '#fff', p: 0, borderRadius: 3}}>
+        <Typography variant='inline' sx={{ fontSize: '12px' }}>
+          {name.split(' ')[0]}
+        </Typography>
+        <Typography variant='inline' sx={{ fontSize: '8px', ml: 0.5 }}>
+          {online}
+        </Typography>
+      </Box> */}
       <Popper
         id={id}
         open={open}

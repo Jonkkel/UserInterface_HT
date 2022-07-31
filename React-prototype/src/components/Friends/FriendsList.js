@@ -17,9 +17,9 @@ import { useState, useCallback } from 'react';
 const items = [
     { type: "./Avatar1.png", name: "Jari Kalmari", relation: 'Group: Hahaa', distance: "1.5km away", online: "now", borderColor: "#ffa978" },
     { type: "./Avatar2.png", name: "Aatos Turunen", relation: 'Best friend', distance: "1.5km away", online: "now", borderColor: "#D000F2" },
-    { type: "./Avatar3.png", name: "Anselmi Menovesi", relation: 'Friend', distance: "1km away", online: "7 min ago", borderColor: "#5200ff" },
-    { type: "./Avatar3.png", name: "Vilma Turunen", relation: 'Group: Hahaa', distance: "23km away", online: "15 min ago", borderColor: "#ffa978" },
-    { type: "./Avatar3.png", name: "Sara Kurki", relation: 'Group: Hahaa', distance: "3km away", online: "1 hour ago", borderColor: "#ffa978" },
+    { type: "./Avatar3.png", name: "Anselmi Menovesi", relation: 'Friend', distance: "1km away", online: "7 min", borderColor: "#5200ff" },
+    { type: "./Avatar3.png", name: "Vilma Turunen", relation: 'Group: Hahaa', distance: "23km away", online: "15 min", borderColor: "#ffa978" },
+    { type: "./Avatar3.png", name: "Sara Kurki", relation: 'Group: Hahaa', distance: "3km away", online: "1 hour", borderColor: "#ffa978" },
 
     // { lat: 61.052, lng: 28.185, type: "./Avatar4.png", name: "Me", badge: "", distance: "Here", borderColor: "#ffa978"},
 ]

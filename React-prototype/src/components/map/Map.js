@@ -8,15 +8,13 @@ import MarkerGroup from './MarkerGroup';
 import SportsBarRoundedIcon from '@mui/icons-material/SportsBarRounded';
 import NewReleasesIcon from '@mui/icons-material/NewReleases';
 
-import { Box } from '@mui/material'
-
 const items = [
-    { lat: 61.06, lng: 28.188, type: "./Avatar1.png", name: "Jari Kalmari", badge: <SportsBarRoundedIcon />, text: "Good party right here", distance: "1.5km away", borderColor: "#ffa978" },
-    { lat: 61.056, lng: 28.175, type: "./Avatar2.png", name: "Aatos Turunen", badge: <NewReleasesIcon />, text: "Send help", distance: "1.5km away", borderColor: "#d000f2" },
-    { lat: 61.06, lng: 28.178, type: "./Avatar3.png", name: "Anselmi Menovesi", badge: "", text: "", distance: "1km away", borderColor: "#5200ff" },
-    { lat: 61.0, lng: 28.178, type: "./Avatar3.png", name: "Vilhelmiina Turunen", badge: "", text: "", distance: "23km away", borderColor: "#ffa978" },
-    { lat: 61.05, lng: 28.22, type: "./Avatar3.png", name: "Sara Kurki", badge: <NewReleasesIcon />, text: "Send help", distance: "3km away", borderColor: "#d000f2" },
-    { lat: 61.05, lng: 28.185, type: "./Avatar4.png", name: "Me", badge: "", text: "", distance: "Here", borderColor: "#" },
+    { lat: 61.06, lng: 28.188, type: "./Avatar1.png", name: "Jari Kalmari", badge: <SportsBarRoundedIcon />, text: "Good party right here", online: "now", distance: "1.5km away", borderColor: "#ffa978" },
+    { lat: 61.056, lng: 28.175, type: "./Avatar2.png", name: "Aatos Turunen", badge: <NewReleasesIcon />, text: "Send help", online: "now", distance: "1.5km away", borderColor: "#d000f2" },
+    { lat: 61.06, lng: 28.178, type: "./Avatar3.png", name: "Anselmi Menovesi", badge: "", text: "", online: "7 min", distance: "1km away", borderColor: "#5200ff" },
+    { lat: 61.0, lng: 28.178, type: "./Avatar3.png", name: "Vilhelmiina Turunen", badge: "", text: "", online: "15 min", distance: "23km away", borderColor: "#ffa978" },
+    { lat: 61.05, lng: 28.22, type: "./Avatar3.png", name: "Sara Kurki", badge: <NewReleasesIcon />, text: "Send help", online: "1 hour", distance: "3km away", borderColor: "#d000f2" },
+    { lat: 61.05, lng: 28.185, type: "./Avatar4.png", name: "Me", badge: "", text: "", online: "now", distance: "Here", borderColor: "#" },
 ]
 
 const mapOptions = { fullscreenControl: false, disableDefaultUI: true, draggable: true }
@@ -28,12 +26,13 @@ const Map = (props) => {
 
     return (
         <GoogleMapReact
-            // tracksViewChanges={false}
-            litemode={true}
+                // tracksViewChanges={false}
+                litemode = { true}
             bootstrapURLKeys={{ key: 'AIzaSyAmpFNR28voaDnjiA3jdG6NdRmYW-U4Qoc' }}
             defaultCenter={center}
             defaultZoom={zoom}
             options={mapOptions}
+            className={'map'}
         >
             {items.map((el, index) => {
                 return (
@@ -51,6 +50,7 @@ const Map = (props) => {
                         distance={el.distance}
                         borderColor={el.borderColor}
                         badge={el.badge}
+                        online={el.online}
                     />
                 )
             })}
