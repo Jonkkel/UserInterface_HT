@@ -4,8 +4,22 @@ This repository contains the two user interfaces created for the User Interface 
 
 ## React prototype
 
-![alt text](https://github.com/Jonkkel/UserInterface_HT/UI-images/React.jpg?raw=true)
+<p align="center">
+  <img src="UI-images/React.jpg" width="150" title="React user interface">
+</p>
 
-The working versions of the UIs can be found at 
- - https://user-interface-ht.vercel.app/ for the React version
- -https://expo.dev/@zonkel/react-native-prototype?serviceType=classic&distribution=expo-go for the React Native version (Only supports Android phones as for the Iphones you need to create account and added as contributor to access it...)
+<h3>
+  How to run
+</h3>
+No need to run anything, the UI is available at: https://user-interface-ht.vercel.app/
+
+## React Native prototype
+
+<p align="center">
+  <img src="UI-images/React-native.jpg" width="150" title="React user interface">
+</p>
+
+#### How to run
+1. 
+Only supports Android phones as for the Iphones you need to create account and added as contributor to access it...
+ -https://expo.dev/@zonkel/react-native-prototype?serviceType=classic&distribution=expo-go
