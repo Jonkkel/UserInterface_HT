@@ -11,6 +11,10 @@ This repository contains the two user interfaces created for the User Interface 
 ### How to run
 1. No need to compile anything as the already built version is available at: https://user-interface-ht.vercel.app/
 
+### Project structure
+<p align="center">
+  <img src="UI-images/Project-structure.png" width="550" title="Project structure">
+</p>
 
 # Optional
 ## React Native prototype
